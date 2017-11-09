@@ -1,18 +1,13 @@
-angular
-.module('acumuladorApp',[])
-.controller("acumuladorCtrl",controladorPrincipal);
+var acumuladorApp = angular.module('acumuladorApp',[]);
+acumuladorApp.controller("acumuladorCtrl",["$scope",function($scope){
+    $scope.total = 0;
+    $scope.cuanto = 0;
 
-function controladorPrincipal(){
-    //esta funcion es mi controlador
-    
-    this.total=0;
-    this.cuanto=0;
-
-    this.sumar = function(){
-        this.total+=parseInt(this.cuanto);
+    $scope.sumar = function(){
+        $scope.total+=parseInt($scope.cuanto);
     }
 
-    this.restar=function(){
-        this.total-=parseInt(this.cuanto);
+    $scope.resta = function(){
+        $scope.total-=parseInt($scope.cuanto);
     }
-};
+}]);
