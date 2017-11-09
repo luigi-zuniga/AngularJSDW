@@ -4,15 +4,15 @@ angular
 
 function controladorPrincipal(){
     //esta funcion es mi controlador
-    var scope = this;
-    scope.total=0;
-    scope.cuanto=0;
+    
+    this.total=0;
+    this.cuanto=0;
 
-    scope.sumar = function(){
-        scope.total+=parseInt(scope.cuanto);
+    this.sumar = function(){
+        this.total+=parseInt(this.cuanto);
     }
 
-    scope.restar=function(){
-        scope.total-=parseInt(scope.cuanto);
+    this.restar=function(){
+        this.total-=parseInt(this.cuanto);
     }
 };
