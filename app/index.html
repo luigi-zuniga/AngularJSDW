@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
     
 </head>
-<body  ng-app="pruebaApp">
-    <div ng-controller="pruebaCtrl as vm">
-       <p>{{vm.algo}}</p> 
+<body  ng-app="acumuladorApp">
+    <div ng-controller="acumuladorCtrl as vm">
+      <h1>Acumulador</h1>
+      <h2>Control de Operación:</h2>
+      ¿Cuanto? <input type="text" ng-model="vm.cuanto" size="4">
+      <br/>
+      <input type="button" value="+" ng-click="vm.sumar()"/>
+      <input type="button" value="-" ng-click="vm.restar()"/>
+      <h2>Totales:</h2>
+      En el acumuador llevamos <span>{{vm.total}}</span>
     </div>
  
 
