@@ -1,5 +1,5 @@
 angular
 .module('pruebaApp',[])
-.controller('pruebaCtrl',function($scope){
-    $scope.algo="Hola desde el controlador";
-});
+.controller('pruebaCtrl',['$scope',function($scope){
+    $scope.angular="Hola desde controller variante opcion 1";
+}]);
